@@ -1,9 +1,17 @@
 🛠️ Working Process
-User Authentication
+User register
 
-Users must sign up/sign in.
-The sessionStorage stores the user ID for authentication.
-Adding a Task
+Users sign up with name, email, and password.
+The frontend sends a POST request to /api/v2/register.
+The password is hashed before storing in MongoDB.
+On success, the user gets a JWT token.
+
+User Login
+
+Users enter email and password.
+The frontend sends a POST request to /api/v2/login.
+The backend verifies the credentials.
+On success, the user gets a JWT token & ID is stored in sessionStorage.
 
 Users input a title, body, and due date.
 The frontend sends a POST request to /api/v2/addTask.
